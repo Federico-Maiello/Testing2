@@ -1,5 +1,6 @@
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.Locale;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
         System.out.println("SHORT format: " + offsetDateTime.format(shortFormatter));
 
     }
-    public static String formatter (DateTimeFormatter dateTimeFormatter, java.time.OffsetDateTime offsetDateTime){
-        return offsetDateTime.format(dateTimeFormatter);
+    public static String formatter (FormatStyle style,  java.time.OffsetDateTime offsetDateTime){
+        return offsetDateTime.format(DateTimeFormatter.ofLocalizedDate(style));
     }
 }
